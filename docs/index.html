@@ -3,9 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Document</title> <!-- タイトル変える -->
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    hello
+    <div class="container">
+        <header>
+            <h1 class="title"><a href="./index.html">南大沢たいようさんぽ（仮）</a></h1> <!-- タイトル変える -->
+            <img src="images/plane.png" style="width:60vw; height: auto; ">
+        </header>
+
+        <nav>
+            <div class="map">
+                <img src="images/main_map.jpg" alt="Map Image"> <!-- 地図の画像変える -->
+            </div>
+            <div class="icon">
+                <div class="rounded-box"></div>
+                <a id="icon1" href="morning/index.html" class="icon-link"><img src="images/morning1.png" class="icon1" alt="Morning"></a>
+                <div id="circle1" class="circle"></div>
+                <a id="icon2" href="afternoon/index.html" class="icon-link"><img src="images/afternoon1.png" alt="Afternoon"></a>
+                <div id="circle2" class="circle"></div>
+                <a id="icon3" href="evening/index.html" class="icon-link"><img src="images/evening1.png" alt="Evening"></a>
+                <div id="circle3" class="circle"></div>
+                <a id="icon4" href="night/index.html" class="icon-link"><img src="images/night1.png" alt="Night"></a>
+                <div id="circle4" class="circle"></div>
+            </div>
+        </nav>
+
+        <main></main>
+        <footer></footer>
+        <script src="script.js"></script>
+    </div>
 </body>
 </html>

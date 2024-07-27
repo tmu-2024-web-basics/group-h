@@ -1,0 +1,113 @@
+header {
+    text-align: center;
+    padding: 2vw;
+    font-size: 2vw;
+  }
+
+header h1 a {
+    color: rgb(255, 255, 255);
+    font-family: Arial, sans-serif;
+    font-size: 5vw;
+    text-decoration: none;
+  }
+
+header img {
+    width: 100%;
+}
+
+body {
+    background: #D9D9D9;
+}
+
+nav {
+    display: grid;
+    grid-template-areas:
+    "map navigation";
+    grid-template-columns: 1fr 1fr;
+    gap: 9.5vw;
+    margin-left: 10vw;
+}
+
+.icon img {
+    grid-area: map;
+    width: 8vw;
+    filter: brightness(0) invert(1);
+    position: relative;
+    z-index: 2;
+    margin: 1.4vw;
+    margin-left: 1.2vw;
+}
+
+.map img {
+    grid-area: navigation;
+    width: 60vw;
+ }
+
+.icon-link img {
+    transition: transform 0.2s ease;
+}
+
+.icon-link:hover img {
+    transform: scale(1.5);
+    animation: changeColor 0.3s ease-out forwards;
+}
+
+.rounded-box {
+    position: absolute;
+    width: 13vw;
+    height: 49vw;
+    border-radius: 10vw;
+    background-color: rgb(255, 255, 255);
+    opacity: 50%;
+    margin-top: -1.5vw;
+    margin-left: -1.3vw;
+}
+
+.circle {
+    position: absolute;
+    width: 7.5vw;
+    height: 7.5vw;
+    border-radius: 50%;
+    margin-top: -9.5vw;
+    margin-left: 1.4vw;
+    background-color: rgb(255, 255, 255);
+    z-index: 1;
+    opacity: 0;
+    transition: transform 0.2s ease;
+}
+
+.icon-link:hover + .circle {
+    transform: scale(1.5);
+    animation: fade 0.1s ease-out forwards;
+}
+
+#circle1 {
+    background-color: rgb(175, 213, 219);
+}
+#circle2 {
+    background-color: rgb(109, 166, 253);
+}
+#circle3 {
+    background-color: rgb(235, 159, 104);
+}
+#circle4 {
+    background-color: rgb(41, 23, 112);
+}
+
+@keyframes changeColor {
+    0% {
+        filter: brightness(0.9) invert(0.1);
+    }
+    to {
+        filter: brightness(1) invert(0);
+    }
+}
+
+@keyframes fade {
+    0% {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
