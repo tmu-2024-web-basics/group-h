@@ -1,47 +1,193 @@
+.container01{
+    display: grid;
+    grid-template-rows: 12vw 41.24vw 1fr 1fr;
+    grid-template-columns: 14.2vw 65vw 15.69vw;
+    grid-template-areas: 
+    "header header header"
+    "side1 nav side2"
+    "side3 main side4"
+    "footer footer footer";
+}
+.container02{
+    display: grid;
+    grid-template-rows: 12vw 41.24vw 80vw 3vw;
+    grid-template-columns: 14.2vw 65vw 15.69vw;
+    grid-template-areas: 
+    "header header header"
+    "side1 nav side2"
+    "side3 main side4"
+    "footer footer footer";
+}
+.header{
+    grid-area: header;
+}
+.nav {
+    grid-area: nav;
+}
+.side1 {
+    grid-area: side1;
+}
+.side2 {
+    grid-area: side2;
+}
+.main {
+    grid-area: main;
+}
+.footer {
+    grid-area: footer;
+}
+
+.body02 a{
+    color: #ffffff;
+}
+.body02 div{
+    color: #ffffff;
+}
+
 header {
     text-align: center;
-    padding: 2vw;
-    font-size: 2vw;
-  }
+    padding: 0vw;
+}
 
-header h1 a {
-    color: rgb(255, 255, 255);
-    font-family: Arial, sans-serif;
-    font-size: 5vw;
+h1{
+    margin: 0;
+    padding: 0;
+}
+
+header h1 a{
+    color: #635555;
+    font-family: "Stick", sans-serif;
+    font-size: 3.7vw;
     text-decoration: none;
-  }
+    border: 0vw;
+    left: 18.2vw;
+    top: 4vw;
+    position: absolute;
+    word-wrap: break-word;
+}
 
+
+ 
 header img {
-    width: 100%;
+    width:40vw; 
+    height: auto;
+    position: absolute;
+    top: 7.6vw;
+    left: 15.2vw;
+}
+.plane_morning{
+    width:14vw; 
+    height: auto;
+    position: absolute;
+    top: 7.4vw;
+    left: 31.75vw;
+}
+.plane_afternoon{
+    width:25vw; 
+    height: auto;
+    position: absolute;
+    top: 7.4vw;
+    left: 31.75vw;
+}
+.plane_evening{
+    width:35vw; 
+    height: auto;
+    position: absolute;
+    top: 7.4vw;
+    left: 31.75vw;
+}
+.plane_night{
+    width:44vw; 
+    height: auto;
+    position: absolute;
+    top: 7.4vw;
+    left: 31.75vw;
 }
 
 body {
     background: #D9D9D9;
 }
 
-nav {
-    display: grid;
+body div{
+    font-family:'stick';
+}
+/* nav {
+    /* display: grid;
     grid-template-areas:
-    "map navigation";
-    grid-template-columns: 1fr 1fr;
-    gap: 9.5vw;
-    margin-left: 10vw;
+    "map navigation"; */
+    /* grid-template-columns: 1fr 1fr;
+    gap: 2vw;
+    margin-left: 12vw; 
+} */
+/* .map{
+    width: 69.3vw;
+    height: auto;
+} */
+.map img {
+    width: 65vw;
+    margin-top: 1vw;
+    margin-left: -1.0vw;
 }
 
+
+.logo01 {
+    color: #635555;
+    font-family: "stoke", sans-serif;
+    font-size: 1.82vw;
+    text-decoration: none;
+    transform: rotate(-90deg);
+    transform-origin: 0 0;
+    left: 13vw; 
+    top: 44vw; 
+    position: absolute;
+    z-index: 0;
+}
+.logo02 {
+    color: #ffffff;
+    font-family: "stoke", sans-serif;
+    font-size: 1.82vw;
+    text-decoration: none;
+    transform: rotate(-90deg);
+    transform-origin: 0 0;
+    left: 13vw; 
+    top: 44vw; 
+    position: absolute;
+    z-index: 0;
+}
+.pin{
+    z-index: 4;
+    left: 43vw; 
+    top: 20.5vw; 
+    position: absolute;
+    width:8vw;
+    height: auto;
+}
+.allow{
+    z-index: 2;
+    left: 43vw; 
+    top: 49.5vw; 
+    position: absolute;
+    width: 12vw;
+    height: auto;
+}
+
+#home{
+    position: relative;
+    top: -3vw;
+}
 .icon img {
     grid-area: map;
-    width: 8vw;
+    width: 6.5vw;
     filter: brightness(0) invert(1);
     position: relative;
     z-index: 2;
-    margin: 1.4vw;
-    margin-left: 1.2vw;
+    margin: 0vw;
+    margin-top:-0.5vw;
+    margin-left: 1.5vw;
+    top: 3vw;
 }
 
-.map img {
-    grid-area: navigation;
-    width: 60vw;
- }
+
 
 .icon-link img {
     transition: transform 0.2s ease;
@@ -55,21 +201,21 @@ nav {
 .rounded-box {
     position: absolute;
     width: 13vw;
-    height: 49vw;
+    height: 37vw;
     border-radius: 10vw;
     background-color: rgb(255, 255, 255);
     opacity: 50%;
-    margin-top: -1.5vw;
+    margin-top: 1vw;
     margin-left: -1.3vw;
 }
 
 .circle {
     position: absolute;
-    width: 7.5vw;
-    height: 7.5vw;
+    width: 5.2vw;
+    height: 5.2vw;
     border-radius: 50%;
-    margin-top: -9.5vw;
-    margin-left: 1.4vw;
+    margin-top: -3vw;
+    margin-left: 2.4vw;
     background-color: rgb(255, 255, 255);
     z-index: 1;
     opacity: 0;
@@ -83,15 +229,24 @@ nav {
 
 #circle1 {
     background-color: rgb(175, 213, 219);
+    box-shadow: -0.5vw -0.5vw 0vw rgba(0, 25.53, 29.56, 0.25) inset; 
+    border-radius: 50vw;
 }
 #circle2 {
     background-color: rgb(109, 166, 253);
+    box-shadow: -0.5vw -0.5vw 0vw rgba(0, 25.53, 29.56, 0.25) inset; 
+    border-radius: 50vw;
 }
 #circle3 {
     background-color: rgb(235, 159, 104);
+    box-shadow: -0.5vw -0.5vw 0vw rgba(0, 25.53, 29.56, 0.25) inset; 
+    border-radius: 50vw;
 }
 #circle4 {
     background-color: rgb(41, 23, 112);
+    box-shadow: -0.5vw -0.5vw 0vw rgba(0, 25.53, 29.56, 0.25) inset; 
+    border-radius: 50vw;
+    
 }
 
 @keyframes changeColor {
@@ -110,4 +265,108 @@ nav {
     to {
         opacity: 1;
     }
+}
+
+.road{
+    width: 71.17vw; 
+    height: 54.38vw; 
+    left: 17.52vw;  
+    position: absolute;
+    margin-top:15vw;
+}
+.photos01{
+    width: 15.17vw; 
+    top: 42vw;
+    left: 35vw;  
+    position: absolute;
+    margin-top:15vw;
+    box-shadow: -20px 20px 20px 0px rgba(0, 0, 0, 0.25);
+}
+.photos02{
+    width: 15.17vw; 
+    top: 66vw;
+    left: 80vw;  
+    position: absolute;
+    box-shadow: -20px 20px 20px 0px rgba(0, 0, 0, 0.25);
+}
+.photos03{
+    width: 15.17vw; 
+    top: 74vw;
+    left: 45vw;  
+    position: absolute;
+    box-shadow: -20px 20px 20px 0px rgba(0, 0, 0, 0.25);
+}
+.photos04{
+    width: 15.17vw; 
+    top: 98vw;
+    left: 38vw; 
+    position: absolute;
+    box-shadow: -20px 20px 20px 0px rgba(0, 0, 0, 0.25);
+}
+.photos05{
+    width: 15.17vw; 
+    top: 107.2vw;
+    left: 69vw; 
+    position: absolute;
+    box-shadow: -20px 20px 20px 0px rgba(0, 0, 0, 0.25);
+}
+.goal{
+    width: 5.17vw; 
+    top: 112.2vw;
+    left: 86vw; 
+    position: absolute;
+}
+main h1{
+    color: #635555;
+    font-size: 3vw;
+}
+main a{
+    color: #635555;
+    font-size: 2vw;
+}
+main div{
+    color: #635555;
+    font-size: 1.5vw;
+    width: 20vw; /* テキストボックスの幅を設定 */
+    word-wrap: break-word; /* テキストを折り返す */
+}
+.time02{
+    top: 57vw;
+    left: 60vw;
+    position: absolute;
+}
+.textbox02{
+    top: 60vw;
+    left: 60vw;
+    position: absolute;
+}
+.time03{
+    top: 73vw;
+    left: 20vw; 
+    position: absolute;
+}
+.textbox03{
+    top: 76vw;
+    left: 20vw; 
+    position: absolute;
+}
+.time04{
+    top: 97vw;
+    left: 15vw; 
+    position: absolute;
+}
+.textbox04{
+    top: 100vw;
+    left: 15vw; 
+    position: absolute;
+}
+.time05{
+    top: 94.2vw;
+    left: 69vw; 
+    position: absolute;
+}
+.textbox05{
+    top: 97.2vw;
+    left: 69vw; 
+    position: absolute;
 }

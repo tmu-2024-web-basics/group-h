@@ -5,44 +5,80 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title> <!-- タイトル変える -->
     <link rel="stylesheet" href="../style.css">
-    <style>
-        #icon2 img {
-           transform: scale(1.5);
-           filter: brightness(1) invert(0);
-       }
-       body {background-color: rgb(109, 166, 253);}
-       #circle2 {
-           opacity: 1;
-           scale: 1.5;
-       }
-   </style>
+    <!-- font stick -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Stick&display=swap" rel="stylesheet">
+    <!-- font stoke -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Stick&family=Stoke:wght@300;400&display=swap" rel="stylesheet">
 </head>
-<body>
-    <div class="container">
-        <header>
-            <h1 class="title"><a href="../index.html">南大沢さんぽ（仮）</a></h1> <!-- タイトル変える -->
-            <img src="../images/plane.png">
+<body class="body02" style="background: #6da6fd;">
+    <div class="container02">
+        <header class="header">
+            <h1 ><a href="../index.html"style="left: 25.91vw;position: absolute;">昼の散歩</a></h1> <!-- タイトル変える -->
+            <img class="plane_afternoon" src="images/plane_afternoon.png"  >
+            <img style="position: absolute;width: 10vw;margin-left: -6vw;margin-top: -5vw;" src="images/afternoonico.png"  >
         </header>
 
-        <nav>
+        <nav class="nav">
             <div class="map">
-                <img src="../images/map.png"> <!-- 地図の画像変える -->
+                <img src="images/afternoonmap.png" alt="Map Image"> 
             </div>
+            <!-- <img class="pin"   src="../images/pin.png" > -->
+            <img class="allow"   src="../images/allow.png" >
+            <h2 style="top: 48vw; " class="logo02"><a>Afternoonmap by Kurokazu</a></h2>
+        </nav>
+        <aside class="side2">
             <div class="icon">
-                <div class="rounded-box"></div>
-                <a id="icon1" href="../morning/index.html" class="icon-link"><img src="../images/morning1.png" class="icon1" alt="Morning"></a>
+                <a id="home" href="../index.html" class="icon-link"><img src="../images/home.png"  alt="Home"></a>
+                <div style="height: 30vw;width:10vw;left: 81vw;" class="rounded-box"></div>
+                <a id="icon1" href="../morning/index.html" class="icon-link"><img src="../images/morning1.png" class="icon1" alt="Morning"></a>                
                 <div id="circle1" class="circle"></div>
-                <a id="icon2" href="../afternoon/index.html"><img src="../images/afternoon1.png" alt="Afternoon"></a>
+                <a id="icon2" href="../afternoon/index.html" class="icon-link"><img src="../images/afternoon1.png" alt="Afternoon"></a>
                 <div id="circle2" class="circle"></div>
                 <a id="icon3" href="../evening/index.html" class="icon-link"><img src="../images/evening1.png" alt="Evening"></a>
                 <div id="circle3" class="circle"></div>
                 <a id="icon4" href="../night/index.html" class="icon-link"><img src="../images/night1.png" alt="Night"></a>
                 <div id="circle4" class="circle"></div>
             </div>
-        </nav>
+        </aside>
 
-        <main></main>
-        <footer></footer>
+        <main class="main">
+            <img class="road" src="images/road_afternoon.png " >
+            <img class="photos01" src="images/01af_photo.jpg " >
+            <img class="photos02" src="images/02af_photo.jpg " >
+            <img class="photos03" src="images/03af_photo.jpg " >
+            <img class="photos04" src="images/04af_photo.jpg " >
+            <img class="photos05" src="images/05af_photo.jpg " >
+            <img class="goal" src="../images/goalpin.png" >
+            <h1><a class="time01">23:00<br></a></h1>
+            <div class="textbox01">
+                アウトレット横の通りを抜け東京都立大学方面に向かう。街灯が輝いており綺麗。
+            </div>
+            <h1><a class="time02">23:10<br></a></h1>
+            <div class="textbox02">
+                階段を駆け上がる。冒険の始まりを感じる。
+            </div>
+            <h1><a class="time03">23:30<br></a></h1>
+            <div class="textbox03">
+                街灯が少なくなってきて雰囲気が出てきた。
+            </div>
+            <h1><a class="time04">22:45<br></a></h1>
+            <div class="textbox04">
+                歩道橋の下に降りると小学校と公園の間に道路があり、小学生の霊が出るとか出ないとか...
+            </div>
+            <h1><a class="time05">24:00<br></a></h1>
+            <div style="font-size: 1.3vw;" class="textbox05">
+                上柚木公園に到着<br>
+中に入り進んでいくとベンチがあり。過去に公園内で自殺者が出ており座っていたら横に座りに来るかも（？）
+            </div>
+
+        </main>
+
+        
+        <footer class="footer">
+        </footer>
+        <script src="script.js"></script>
     </div>
-</body>
-</html>

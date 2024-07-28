@@ -5,32 +5,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title> <!-- タイトル変える -->
     <link rel="stylesheet" href="../style.css">
-    <style>
-         #icon1 img {
-            transform: scale(1.5);
-            filter: brightness(1) invert(0);
-        }
-        body {background-color: rgb(175, 213, 219);}
-        #circle1 {
-            opacity: 1;
-            scale: 1.5;
-        }
-    </style>
+    <!-- font stick -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Stick&display=swap" rel="stylesheet">
+    <!-- font stoke -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Stick&family=Stoke:wght@300;400&display=swap" rel="stylesheet">
 </head>
-<body>
-    <div class="container">
-        <header>
-            <h1 class="title"><a href="../index.html">南大沢さんぽ（仮）</a></h1> <!-- タイトル変える -->
-            <img src="../images/plane.png">
+<body style="background: #AFD5DB;">
+    <div class="container02">
+        <header class="header">
+            <h1 ><a href="../index.html"style="left: 25.91vw;position: absolute;">富士見散歩</a></h1> <!-- タイトル変える -->
+            <img class="plane_morning" src="images/plane_morning.png"  >
+            <img style="position: absolute;width: 15vw;margin-left: -6vw;margin-top: -5vw;" src="images/motningico.png"  >
         </header>
 
-        <nav>
+        <nav class="nav">
             <div class="map">
-                <img src="../images/map.png"> <!-- 地図の画像変える -->
+                <img src="images/morningmap.png" alt="Map Image"> <!-- 地図の画像変える -->
             </div>
+            <img class="allow"   src="../images/allow.png" >
+            <h2 style="top: 48vw;" class="logo01"><a>Morningmap by Hyuga</a></h2>
+        </nav>
+        <aside class="side2">
             <div class="icon">
-                <div class="rounded-box"></div>
-                <a id="icon1" href="../morning/index.html"><img src="../images/morning1.png" class="icon1" alt="Morning"></a>
+                <a id="home" href="../index.html" class="icon-link"><img src="../images/home.png"  alt="Home"></a>
+                <div style="height: 30vw;width:10vw;left: 81vw;" class="rounded-box"></div>
+                <a id="icon1" href="../morning/index.html" class="icon-link"><img src="../images/morning1.png" class="icon1" alt="Morning"></a>                
                 <div id="circle1" class="circle"></div>
                 <a id="icon2" href="../afternoon/index.html" class="icon-link"><img src="../images/afternoon1.png" alt="Afternoon"></a>
                 <div id="circle2" class="circle"></div>
@@ -39,10 +42,43 @@
                 <a id="icon4" href="../night/index.html" class="icon-link"><img src="../images/night1.png" alt="Night"></a>
                 <div id="circle4" class="circle"></div>
             </div>
-        </nav>
+        </aside>
 
-        <main></main>
-        <footer></footer>
+        <main class="main">
+            <img class="road" src="images/road_morning.png " >
+            <img class="photos01" src="images/01mo_photo.jpg " >
+            <img class="photos02" src="images/02mo_photo.jpg " >
+            <img class="photos03" src="images/03mo_photo.jpg " >
+            <img class="photos04" src="images/04mo_photo.jpg " >
+            <img class="photos05" src="images/05mo_photo.jpg " >
+            <img class="goal" src="../images/goalpin.png" >
+            <h1><a class="time01">00:00<br></a></h1>
+            <div class="textbox01">
+                これはテキストボックス内の長いテキストの例です。テキストがボックスの幅を超えた場合、折り返されます。
+            </div>
+            <h1><a class="time02">00:00<br></a></h1>
+            <div class="textbox02">
+                これはテキストボックス内の長いテキストの例です。テキストがボックスの幅を超えた場合、折り返されます。
+            </div>
+            <h1><a class="time03">00:00<br></a></h1>
+            <div class="textbox03">
+                これはテキストボックス内の長いテキストの例です。テキストがボックスの幅を超えた場合、折り返されます。
+            </div>
+            <h1><a class="time04">00:00<br></a></h1>
+            <div class="textbox04">
+                これはテキストボックス内の長いテキストの例です。テキストがボックスの幅を超えた場合、折り返されます。
+            </div>
+            <h1><a class="time05">00:00<br></a></h1>
+            <div class="textbox05">
+                これはテキストボックス内の長いテキストの例です。テキストがボックスの幅を超えた場合、折り返されます。
+            </div>
+
+        </main>
+
+        
+        <footer class="footer">
+        </footer>
+        <script src="script.js"></script>
     </div>
 </body>
 </html>
