@@ -28,12 +28,14 @@
             </div>
             <!-- <img class="pin"   src="../images/pin.png" > -->
             <img class="allow"   src="../images/allow.png" >
+            <img style="position: absolute;top: 15vw; left:2vw;width: 26vw;" 
+            src="../images/cloudL.png" alt="cloudL">
             <h2 style="top: 48vw; " class="logo02"><a>Eveningmap by Hibiki</a></h2>
         </nav>
         <aside class="side2">
             <div class="icon">
                 <a id="home" href="../index.html" class="icon-link"><img src="../images/home.png"  alt="Home"></a>
-                <div style="height: 30vw;width:10vw;left: 81vw;" class="rounded-box"></div>
+                <div style="height: 30vw;width:10vw;" class="rounded-box"></div>
                 <a id="icon1" href="../morning/index.html" class="icon-link"><img src="../images/morning1.png" class="icon1" alt="Morning"></a>                
                 <div id="circle1" class="circle"></div>
                 <a id="icon2" href="../afternoon/index.html" class="icon-link"><img src="../images/afternoon1.png" alt="Afternoon"></a>
@@ -47,32 +49,36 @@
 
         <main class="main">
             <img class="road" src="images/road_evening.png " >
-            <img class="photos01" src="images/01ev_photo.jpg " >
-            <img class="photos02" src="images/02ev_photo.jpg " >
-            <img class="photos03" src="images/03ev_photo.jpg " >
-            <img class="photos04" src="images/04ev_photo.jpg " >
-            <img class="photos05" src="images/05ev_photo.jpg " >
+            <img class="photos01" src="images/01ev_photo.jpg " data-highres="images/hi01ev_photo.jpg " onclick="openModal(this)">
+            <img class="photos02" src="images/02ev_photo.jpg " data-highres="images/hi02ev_photo.jpg " onclick="openModal(this)">
+            <img class="photos03" src="images/03ev_photo.jpg " data-highres="images/hi03ev_photo.jpg " onclick="openModal(this)">
+            <img class="photos04" src="images/04ev_photo.jpg " data-highres="images/hi04ev_photo.jpg " onclick="openModal(this)">
+            <img class="photos05" src="images/05ev_photo.jpg " data-highres="images/hi05ev_photo.jpg " onclick="openModal(this)">
             <img class="goal" src="../images/goalpin.png" >
-            <h1><a class="time01">23:00<br></a></h1>
+            <!-- モーダル -->
+            <div id="modal" class="modal">
+                <span class="close" onclick="closeModal()">&times;</span>
+                <img class="modal-content" id="modal-image">
+            </div>           
+            <h1><a class="time01">18:00<br></a></h1>
             <div class="textbox01">
-                アウトレット横の通りを抜け東京都立大学方面に向かう。街灯が輝いており綺麗。
+                ５限終わり。南大沢駅を出発。天気がいいから夕焼けを見に行こう。
             </div>
-            <h1><a class="time02">23:10<br></a></h1>
+            <h1><a class="time02">18:05<br></a></h1>
             <div class="textbox02">
-                階段を駆け上がる。冒険の始まりを感じる。
+                南大沢のアウトレット。少しずつ日が傾いてきてる。今日の気温は35度。
             </div>
-            <h1><a class="time03">23:30<br></a></h1>
+            <h1><a class="time03">18:22<br></a></h1>
             <div class="textbox03">
-                街灯が少なくなってきて雰囲気が出てきた。
+                愛宕小学校。夏休みの小学生はまだまだ遊べる時間。
             </div>
-            <h1><a class="time04">22:45<br></a></h1>
+            <h1><a class="time04">18:29<br></a></h1>
             <div class="textbox04">
-                歩道橋の下に降りると小学校と公園の間に道路があり、小学生の霊が出るとか出ないとか...
+                上柚木公園の芝生の丘。展望台があるらしい。汗だくだったので行かなかった。
             </div>
-            <h1><a class="time05">24:00<br></a></h1>
-            <div style="font-size: 1.3vw;" class="textbox05">
-                上柚木公園に到着<br>
-中に入り進んでいくとベンチがあり。過去に公園内で自殺者が出ており座っていたら横に座りに来るかも（？）
+            <h1><a class="time05">18:31<br></a></h1>
+            <div style="font-size: 1.5vw;" class="textbox05">
+                公園の近くの橋から見えた夕焼け。満足したから今日はここまで。アイスを買って帰ろう。
             </div>
 
         </main>
@@ -80,5 +86,5 @@
         
         <footer class="footer">
         </footer>
-        <script src="script.js"></script>
+        <script src="../script.js"></script>
     </div>

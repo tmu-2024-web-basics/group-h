@@ -28,12 +28,14 @@
             </div>
             <!-- <img class="pin"   src="../images/pin.png" > -->
             <img class="allow"   src="../images/allow.png" >
-            <h2 style="top: 48vw; " class="logo02"><a>Afternoonmap by Kurokazu</a></h2>
+            <img style="position: absolute;top: 15vw; left:2vw;width: 22vw;" 
+            src="../images/cloudL.png" alt="cloudL">
+            <h2 style="top: 48vw;font-size: 1.6vw; " class="logo02"><a>Afternoonmap by Kurokazu</a></h2>
         </nav>
         <aside class="side2">
             <div class="icon">
                 <a id="home" href="../index.html" class="icon-link"><img src="../images/home.png"  alt="Home"></a>
-                <div style="height: 30vw;width:10vw;left: 81vw;" class="rounded-box"></div>
+                <div style="height: 30vw;width:10vw;" class="rounded-box"></div>
                 <a id="icon1" href="../morning/index.html" class="icon-link"><img src="../images/morning1.png" class="icon1" alt="Morning"></a>                
                 <div id="circle1" class="circle"></div>
                 <a id="icon2" href="../afternoon/index.html" class="icon-link"><img src="../images/afternoon1.png" alt="Afternoon"></a>
@@ -47,32 +49,37 @@
 
         <main class="main">
             <img class="road" src="images/road_afternoon.png " >
-            <img class="photos01" src="images/01af_photo.jpg " >
-            <img class="photos02" src="images/02af_photo.jpg " >
-            <img class="photos03" src="images/03af_photo.jpg " >
-            <img class="photos04" src="images/04af_photo.jpg " >
-            <img class="photos05" src="images/05af_photo.jpg " >
+            <img class="photos01" src="images/01af_photo.jpg " data-highres="images/hi01af_photo.jpg " onclick="openModal(this)">
+            <img class="photos02" src="images/02af_photo.jpg " data-highres="images/hi02af_photo.jpg " onclick="openModal(this)">
+            <img class="photos03" src="images/03af_photo.jpg " data-highres="images/hi03af_photo.jpg " onclick="openModal(this)">
+            <img class="photos04" src="images/04af_photo.jpg " data-highres="images/hi04af_photo.jpg " onclick="openModal(this)">
+            <img class="photos05" src="images/05af_photo.jpg " data-highres="images/hi05af_photo.jpg " onclick="openModal(this)">
             <img class="goal" src="../images/goalpin.png" >
-            <h1><a class="time01">23:00<br></a></h1>
+                        <!-- モーダル -->
+            <div id="modal" class="modal">
+                <span class="close" onclick="closeModal()">&times;</span>
+                <img class="modal-content" id="modal-image">
+            </div>
+            
+            <h1><a class="time01">13:00<br></a></h1>
             <div class="textbox01">
-                アウトレット横の通りを抜け東京都立大学方面に向かう。街灯が輝いており綺麗。
+                南大沢駅から東側に向かって歩く。草木が生い茂った涼しげな道で暑い日にはありがたい。
             </div>
-            <h1><a class="time02">23:10<br></a></h1>
+            <h1><a class="time02">13:05<br></a></h1>
             <div class="textbox02">
-                階段を駆け上がる。冒険の始まりを感じる。
+                進んでいくと謎神社を発見。散歩の安全を願って手を合わせてみる。こんなところに神様はいるのだろうか。
             </div>
-            <h1><a class="time03">23:30<br></a></h1>
-            <div class="textbox03">
-                街灯が少なくなってきて雰囲気が出てきた。
+            <h1><a class="time03">13:20<br></a></h1>
+            <div style="font-size: 1.35vw;" class="textbox03">
+                住宅街へと続く歩道橋を歩いていくと上の方に橋を見つけた。南大沢を一望できるいい橋だ。展望橋と名付けよう。。
             </div>
-            <h1><a class="time04">22:45<br></a></h1>
+            <h1><a class="time04">13:30<br></a></h1>
             <div class="textbox04">
-                歩道橋の下に降りると小学校と公園の間に道路があり、小学生の霊が出るとか出ないとか...
+                坂を下っていくと緑地に着いた。小川が流れていて心が安らぐ。
             </div>
-            <h1><a class="time05">24:00<br></a></h1>
-            <div style="font-size: 1.3vw;" class="textbox05">
-                上柚木公園に到着<br>
-中に入り進んでいくとベンチがあり。過去に公園内で自殺者が出ており座っていたら横に座りに来るかも（？）
+            <h1><a class="time05">13:40<br></a></h1>
+            <div style="font-size: 1.35vw;" class="textbox05">
+                緑地の中に階段があった。影の中へと続くその道はどこに繋がっていくのだろうか。まだ見ぬ道を求めて散歩は続いていく。
             </div>
 
         </main>
@@ -80,5 +87,5 @@
         
         <footer class="footer">
         </footer>
-        <script src="script.js"></script>
+        <script src="../script.js"></script>
     </div>

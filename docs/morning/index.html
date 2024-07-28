@@ -27,12 +27,14 @@
                 <img src="images/morningmap.png" alt="Map Image"> <!-- 地図の画像変える -->
             </div>
             <img class="allow"   src="../images/allow.png" >
+            <img style="position: absolute;top: 15vw; left:2vw;width: 26vw;" 
+            src="../images/cloudL.png" alt="cloudL">
             <h2 style="top: 48vw;" class="logo01"><a>Morningmap by Hyuga</a></h2>
         </nav>
         <aside class="side2">
             <div class="icon">
                 <a id="home" href="../index.html" class="icon-link"><img src="../images/home.png"  alt="Home"></a>
-                <div style="height: 30vw;width:10vw;left: 81vw;" class="rounded-box"></div>
+                <div style="height: 30vw;width:10vw;" class="rounded-box"></div>
                 <a id="icon1" href="../morning/index.html" class="icon-link"><img src="../images/morning1.png" class="icon1" alt="Morning"></a>                
                 <div id="circle1" class="circle"></div>
                 <a id="icon2" href="../afternoon/index.html" class="icon-link"><img src="../images/afternoon1.png" alt="Afternoon"></a>
@@ -46,31 +48,36 @@
 
         <main class="main">
             <img class="road" src="images/road_morning.png " >
-            <img class="photos01" src="images/01mo_photo.jpg " >
-            <img class="photos02" src="images/02mo_photo.jpg " >
-            <img class="photos03" src="images/03mo_photo.jpg " >
-            <img class="photos04" src="images/04mo_photo.jpg " >
-            <img class="photos05" src="images/05mo_photo.jpg " >
+            <img class="photos01" src="images/01mo_photo.jpg " data-highres="images/hi01mo_photo.jpg " onclick="openModal(this)">
+            <img class="photos02" src="images/02mo_photo.jpg " data-highres="images/hi02mo_photo.jpg " onclick="openModal(this)">
+            <img class="photos03" src="images/03mo_photo.jpg " data-highres="images/hi03mo_photo.jpg " onclick="openModal(this)">
+            <img class="photos04" src="images/04mo_photo.jpg " data-highres="images/hi04mo_photo.jpg " onclick="openModal(this)">
+            <img class="photos05" src="images/05mo_photo.jpg " data-highres="images/hi05mo_photo.jpg " onclick="openModal(this)">
+                <!-- モーダル -->
+            <div id="modal" class="modal">
+                <span class="close" onclick="closeModal()">&times;</span>
+                <img class="modal-content" id="modal-image">
+            </div>
             <img class="goal" src="../images/goalpin.png" >
-            <h1><a class="time01">00:00<br></a></h1>
+            <h1><a class="time01">04:50<br></a></h1>
             <div class="textbox01">
-                これはテキストボックス内の長いテキストの例です。テキストがボックスの幅を超えた場合、折り返されます。
+                長い道のりをいく。都立大は横に長い。テニスコートをぬけ、端まで初めて行ってみる。
             </div>
-            <h1><a class="time02">00:00<br></a></h1>
-            <div class="textbox02">
-                これはテキストボックス内の長いテキストの例です。テキストがボックスの幅を超えた場合、折り返されます。
+            <h1><a class="time02">05:07<br></a></h1>
+            <div style="font-size: 1.4vw;" class="textbox02">
+                都立大学の突き当り、2つ道があるけど今回は右のこっち。橋が見える方も緑のトンネルが綺麗。空が明るくなってくる頃。
             </div>
-            <h1><a class="time03">00:00<br></a></h1>
+            <h1><a class="time03">05:10<br></a></h1>
             <div class="textbox03">
-                これはテキストボックス内の長いテキストの例です。テキストがボックスの幅を超えた場合、折り返されます。
+                駐車場を入って左、柵の先に展望台が現れる。登ってみる。
             </div>
-            <h1><a class="time04">00:00<br></a></h1>
+            <h1><a class="time04">05:14<br></a></h1>
             <div class="textbox04">
-                これはテキストボックス内の長いテキストの例です。テキストがボックスの幅を超えた場合、折り返されます。
+                太陽とは反対方向、小さいけれど遠くの方に富士山が見える。ぜひ見つけてほしい。
             </div>
-            <h1><a class="time05">00:00<br></a></h1>
-            <div class="textbox05">
-                これはテキストボックス内の長いテキストの例です。テキストがボックスの幅を超えた場合、折り返されます。
+            <h1><a class="time05">05:26<br></a></h1>
+            <div style="font-size: 1.3vw;" class="textbox05">
+                少し足を伸ばして富士見橋まで降りると、道が太陽の方向に続いていて綺麗な朝日と道路、川が見れる。冬の澄んだ空気の時は雪の被った富士山も。
             </div>
 
         </main>
@@ -78,7 +85,7 @@
         
         <footer class="footer">
         </footer>
-        <script src="script.js"></script>
+        <script src="../script.js"></script>
     </div>
 </body>
 </html>

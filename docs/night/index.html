@@ -23,17 +23,19 @@
         </header>
 
         <nav class="nav">
-            <div class="map">
+            <div class="map" id="map">
                 <img src="images/naightmap.png" alt="Map Image"> 
             </div>
             <!-- <img class="pin"   src="../images/pin.png" > -->
             <img class="allow"   src="../images/allow.png" >
+            <img style="position: absolute;top: 15vw; left:2vw;width: 26vw;" 
+            src="../images/cloudL.png" alt="cloudL">
             <h2 style="top: 48vw; " class="logo02"><a>Nightmap by Yuiki</a></h2>
         </nav>
         <aside class="side2">
             <div class="icon">
                 <a id="home" href="../index.html" class="icon-link"><img src="../images/home.png"  alt="Home"></a>
-                <div style="height: 30vw;width:10vw;left: 81vw;" class="rounded-box"></div>
+                <div style="height: 30vw;width:10vw;" class="rounded-box"></div>
                 <a id="icon1" href="../morning/index.html" class="icon-link"><img src="../images/morning1.png" class="icon1" alt="Morning"></a>                
                 <div id="circle1" class="circle"></div>
                 <a id="icon2" href="../afternoon/index.html" class="icon-link"><img src="../images/afternoon1.png" alt="Afternoon"></a>
@@ -47,12 +49,17 @@
 
         <main class="main">
             <img class="road" src="images/road_night.png " >
-            <img class="photos01" src="images/01ni_photo.jpg " >
-            <img class="photos02" src="images/02ni_photo.jpg " >
-            <img class="photos03" src="images/03ni_photo.jpg " >
-            <img class="photos04" src="images/04ni_photo.jpg " >
-            <img class="photos05" src="images/05ni_photo.jpg " >
+            <img class="photos01" src="images/01ni_photo.jpg "data-highres="images/hi01ni_photo.jpg " onclick="openModal(this)" >
+            <img class="photos02" src="images/02ni_photo.jpg "data-highres="images/hi02ni_photo.jpg " onclick="openModal(this)" >
+            <img class="photos03" src="images/03ni_photo.jpg "data-highres="images/hi03ni_photo.jpg " onclick="openModal(this)">
+            <img class="photos04" src="images/04ni_photo.jpg "data-highres="images/hi04ni_photo.jpg " onclick="openModal(this)" >
+            <img class="photos05" src="images/05ni_photo.jpg "data-highres="images/hi05ni_photo.jpg " onclick="openModal(this)" >
             <img class="goal" src="../images/goalpin.png" >
+                <!-- モーダル -->
+            <div id="modal" class="modal">
+                <span class="close" onclick="closeModal()">&times;</span>
+                <img class="modal-content" id="modal-image">
+            </div>
             <h1><a class="time01">23:00<br></a></h1>
             <div class="textbox01">
                 アウトレット横の通りを抜け東京都立大学方面に向かう。街灯が輝いており綺麗。
@@ -80,7 +87,22 @@
         
         <footer class="footer">
         </footer>
-        <script src="script.js"></script>
+        <script src="../script.js">
+            function createPin(left, top, src) {
+            const container = document.getElementById('map');
+            const pin = document.createElement('img');
+            pin.src = src ;  // 画像ソースを指定
+            pin.className = 'pin';
+            pin.style.left = `${left}vw`;
+            pin.style.top = `${top}vw`;
+            container.appendChild(pin);
+        }
+
+        
+        createPin(43, 20.5, '../images/pin.png'); // 1つ目のピン
+        createPin(50, 25, '../images/pin.png');   // 2つ目のピン
+        createPin(60, 30, '../images/pin.png');   // 3つ目のピン
+        </script>
     </div>
 </body>
 </html>
