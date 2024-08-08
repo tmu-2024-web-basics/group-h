@@ -1,6 +1,6 @@
 .container01{
     display: grid;
-    grid-template-rows: 12vw 40vw 1fr 1fr;
+    grid-template-rows: 12vw 38vw 1fr 1fr;
     grid-template-columns: 14.2vw 65vw 15.69vw;
     grid-template-areas: 
     "header header header"
@@ -111,18 +111,7 @@ body {
 body div{
     font-family:'stick';
 }
-/* nav {
-    /* display: grid;
-    grid-template-areas:
-    "map navigation"; */
-    /* grid-template-columns: 1fr 1fr;
-    gap: 2vw;
-    margin-left: 12vw; 
-} */
-/* .map{
-    width: 69.3vw;
-    height: auto;
-} */
+
 .map img {
     width: 65vw;
     margin-top: 1vw;
@@ -156,11 +145,38 @@ body div{
 }
 .pin{
     z-index: 4;
-    /* left: 43vw; 
-    top: 20.5vw;  */
     position: absolute;
-    width:3vw;
+    width:2vw;
     height: auto;
+    transform: translateY(100%);
+}
+.pin:hover{
+    transform: scale(1);
+    transform: translateY(2vw);
+    transition: transform 0.6s ease;    
+}
+
+.goal-flag {
+    position: absolute;
+    width: 3vw; 
+    height: auto;
+    z-index: 5;
+    transform: translateY(100%);
+    transform: rotate(-12deg);
+}
+.goal-flag01 {
+    position: absolute;
+    width: 3vw; 
+    height: auto;
+    z-index: 5;
+    transform: translateY(100%);
+    transform: rotate(-12deg);
+}
+.goal-flag:hover {
+    transform: scale(1);
+    transform: translateY(-4vw);
+    transform: rotate(-22deg);
+    transition: transform 0.6s ease;   
 }
 
 
@@ -172,6 +188,24 @@ body div{
     position: absolute;
     width: 12vw;
     height: auto;
+}
+.allow:hover{
+    transform: scale(1.2);
+    transform: translateY(0.5vw);
+    transition: transform 0.6s ease;    
+}
+.star{
+    z-index: 2;
+    left: 47vw; 
+    top: 32vw; 
+    position: absolute;
+    width: 2.2vw;
+    height: auto;
+}
+
+.guid{
+    font-size: 2vw;
+    width: 60vw;
 }
 
 #home{
@@ -203,15 +237,22 @@ body div{
 
 .rounded-box {
     position: absolute;
-    /* width: 13vw;
-    height: 37vw; */
     border-radius: 10vw;
     background-color: rgb(255, 255, 255);
     opacity: 50%;
-    /* margin-top: 1vw;
-    margin-left: -1.3vw; */
     top: 19vw;
     left: 79.7vw;
+}
+
+@media screen and (max-width:850px) {
+    .rounded-box{
+        left: 80.7vw;
+        top: 21vw;
+    }
+    .guid{
+        font-size: 3vw;
+        width: 80vw;
+    }
 }
 
 .circle {
@@ -289,6 +330,14 @@ body div{
     width: 100%;
     height: 100%;
     overflow: auto; 
+    background-color: transparent;
+    backdrop-filter: blur(5px);
+    -webkit-background-filter: 5px;
+    background-image: linear-gradient(
+        120deg,
+        rgba(255,255,255,0.3),
+        rgba(0, 0, 0, 0.2)
+    );
     background-color: rgba(0,0,0,0.8); 
 }
 
@@ -296,9 +345,11 @@ body div{
 .modal-content {
     margin: auto;
     display: block;
-    max-width: 80%;
-    max-height: 80%;
-    padding-top: 14vw; 
+    width: 50%;
+    max-width: 100%;
+    max-height: 100%;
+    padding-top: 10vw; 
+    
 }
 
 /* 閉じるボタンのスタイル */
@@ -320,7 +371,17 @@ body div{
     cursor: pointer;
 }
 
-.photos01{
+.photos{
+    z-index: 5;
+}
+
+.photos:hover{
+    transform: scale(1.2);
+    transition: transform 0.2s ease;
+    /* animation: changeColor 0.3s ease-out forwards; */
+}
+
+#photos01{
     width: 15.17vw; 
     top: 42vw;
     left: 35vw;  
@@ -328,28 +389,28 @@ body div{
     margin-top:15vw;
     box-shadow: -10px 10px 10px 0px rgba(0, 0, 0, 0.25);
 }
-.photos02{
+#photos02{
     width: 15.17vw; 
-    top: 66vw;
+    top: 60vw;
     left: 80vw;  
     position: absolute;
     box-shadow: -10px 10px 10px 0px rgba(0, 0, 0, 0.25);
 }
-.photos03{
+#photos03{
     width: 15.17vw; 
     top: 74vw;
     left: 45vw;  
     position: absolute;
     box-shadow: -10px 10px 10px 0px rgba(0, 0, 0, 0.25);
 }
-.photos04{
+#photos04{
     width: 15.17vw; 
     top: 98vw;
     left: 38vw; 
     position: absolute;
     box-shadow: -10px 10px 10px 0px rgba(0, 0, 0, 0.25);
 }
-.photos05{
+#photos05{
     width: 15.17vw; 
     top: 107.2vw;
     left: 69vw; 
@@ -397,12 +458,12 @@ main div{
     position: absolute;
 }
 .time03{
-    top: 73vw;
+    top: 74vw;
     left: 20vw; 
     position: absolute;
 }
 .textbox03{
-    top: 76vw;
+    top: 77vw;
     left: 20vw; 
     position: absolute;
 }
@@ -425,4 +486,12 @@ main div{
     top: 97.2vw;
     left: 69vw; 
     position: absolute;
+}
+
+.cloud{
+    position: absolute;
+    height: 60vh;
+    right: -20vw;
+    z-index: 9999;
+    transition: left 2s ease-in-out, top 2s ease-in-out;
 }

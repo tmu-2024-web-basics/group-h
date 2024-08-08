@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title> <!-- タイトル変える -->
+    <title>minamioosawasanpo/nightmap</title>
     <link rel="stylesheet" href="../style.css">
     <!-- font stick -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -15,6 +15,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Stick&family=Stoke:wght@300;400&display=swap" rel="stylesheet">
 </head>
 <body class="body02" style="background: #314C9D;">
+    <!-- <img class="cloud" id="cloud1" src="../images/cloudW.png"> -->
     <div class="container02">
         <header class="header">
             <h1 ><a href="../index.html"style="left: 25.91vw;position: absolute;">夜の心霊散歩</a></h1> <!-- タイトル変える -->
@@ -27,10 +28,11 @@
                 <img src="images/naightmap.png" alt="Map Image"> 
             </div>
             <!-- <img class="pin"   src="../images/pin.png" > -->
-            <img class="allow"   src="../images/allow.png" >
+            <img class="allow" id="allow" src="../images/allow.png" >
             <img style="position: absolute;top: 15vw; left:2vw;width: 26vw;" 
             src="../images/cloudL.png" alt="cloudL">
             <h2 style="top: 48vw; " class="logo02"><a>Nightmap by Yuiki</a></h2>
+            <img class="star" style="width: 3vw; top: 43vw; left: 69vw;"   src="../images/star.png" >
         </nav>
         <aside class="side2">
             <div class="icon">
@@ -49,34 +51,34 @@
 
         <main class="main">
             <img class="road" src="images/road_night.png " >
-            <img class="photos01" src="images/01ni_photo.jpg "data-highres="images/hi01ni_photo.jpg " onclick="openModal(this)" >
-            <img class="photos02" src="images/02ni_photo.jpg "data-highres="images/hi02ni_photo.jpg " onclick="openModal(this)" >
-            <img class="photos03" src="images/03ni_photo.jpg "data-highres="images/hi03ni_photo.jpg " onclick="openModal(this)">
-            <img class="photos04" src="images/04ni_photo.jpg "data-highres="images/hi04ni_photo.jpg " onclick="openModal(this)" >
-            <img class="photos05" src="images/05ni_photo.jpg "data-highres="images/hi05ni_photo.jpg " onclick="openModal(this)" >
+            <img class="photos" id="photos01" src="images/01ni_photo.jpg "data-highres="images/hi01ni_photo.jpg " onclick="openModal(this)" >
+            <img class="photos" id="photos02" src="images/02ni_photo.jpg "data-highres="images/hi02ni_photo.jpg " onclick="openModal(this)" >
+            <img class="photos" id="photos03" src="images/03ni_photo.jpg "data-highres="images/hi03ni_photo.jpg " onclick="openModal(this)">
+            <img class="photos" id="photos04" src="images/04ni_photo.jpg "data-highres="images/hi04ni_photo.jpg " onclick="openModal(this)" >
+            <img class="photos" id="photos05" src="images/05ni_photo.jpg "data-highres="images/hi05ni_photo.jpg " onclick="openModal(this)" >
             <img class="goal" src="../images/goalpin.png" >
                 <!-- モーダル -->
             <div id="modal" class="modal">
                 <span class="close" onclick="closeModal()">&times;</span>
                 <img class="modal-content" id="modal-image">
             </div>
-            <h1><a class="time01">23:00<br></a></h1>
+            <h1><a class="time01" id="time01">23:00<br></a></h1>
             <div class="textbox01">
                 アウトレット横の通りを抜け東京都立大学方面に向かう。街灯が輝いており綺麗。
             </div>
-            <h1><a class="time02">23:10<br></a></h1>
+            <h1><a class="time02" id="time02">23:10<br></a></h1>
             <div class="textbox02">
                 階段を駆け上がる。冒険の始まりを感じる。
             </div>
-            <h1><a class="time03">23:30<br></a></h1>
+            <h1><a class="time03" id="time03">23:30<br></a></h1>
             <div class="textbox03">
                 街灯が少なくなってきて雰囲気が出てきた。
             </div>
-            <h1><a class="time04">22:45<br></a></h1>
+            <h1><a class="time04" id="time04">22:45<br></a></h1>
             <div class="textbox04">
                 歩道橋の下に降りると小学校と公園の間に道路があり、小学生の霊が出るとか出ないとか...
             </div>
-            <h1><a class="time05">24:00<br></a></h1>
+            <h1><a class="time05" id="time05">24:00<br></a></h1>
             <div style="font-size: 1.3vw;" class="textbox05">
                 上柚木公園に到着<br>
 中に入り進んでいくとベンチがあり。過去に公園内で自殺者が出ており座っていたら横に座りに来るかも（？）
@@ -87,21 +89,13 @@
         
         <footer class="footer">
         </footer>
-        <script src="../script.js">
-            function createPin(left, top, src) {
-            const container = document.getElementById('map');
-            const pin = document.createElement('img');
-            pin.src = src ;  // 画像ソースを指定
-            pin.className = 'pin';
-            pin.style.left = `${left}vw`;
-            pin.style.top = `${top}vw`;
-            container.appendChild(pin);
-        }
-
-        
-        createPin(43, 20.5, '../images/pin.png'); // 1つ目のピン
-        createPin(50, 25, '../images/pin.png');   // 2つ目のピン
-        createPin(60, 30, '../images/pin.png');   // 3つ目のピン
+        <script src="../script.js"></script>
+        <script>
+            placeGoalFlag(24, 29.5, "time05");
+            createPin(36, 64.6, "time01"); // 1つ目のピン
+            createPin(36, 53, "time02");   // 2つ目のピン
+            createPin(28.3, 37, "time03");   // 3つ目のピン
+            createPin(25.5, 33.5, "time04");   // 4つ目のピン
         </script>
     </div>
 </body>

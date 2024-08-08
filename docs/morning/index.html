@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title> <!-- タイトル変える -->
+    <title>minamioosawasanpo/morningmap</title> 
     <link rel="stylesheet" href="../style.css">
     <!-- font stick -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -26,10 +26,11 @@
             <div class="map">
                 <img src="images/morningmap.png" alt="Map Image"> <!-- 地図の画像変える -->
             </div>
-            <img class="allow"   src="../images/allow.png" >
+            <img class="allow" id="allow"  src="../images/allow.png" >
             <img style="position: absolute;top: 15vw; left:2vw;width: 26vw;" 
             src="../images/cloudL.png" alt="cloudL">
             <h2 style="top: 48vw;" class="logo01"><a>Morningmap by Hyuga</a></h2>
+            <img class="star" style="width: 3vw; top: 43vw; left: 41vw;"   src="../images/star.png" >
         </nav>
         <aside class="side2">
             <div class="icon">
@@ -48,34 +49,34 @@
 
         <main class="main">
             <img class="road" src="images/road_morning.png " >
-            <img class="photos01" src="images/01mo_photo.jpg " data-highres="images/hi01mo_photo.jpg " onclick="openModal(this)">
-            <img class="photos02" src="images/02mo_photo.jpg " data-highres="images/hi02mo_photo.jpg " onclick="openModal(this)">
-            <img class="photos03" src="images/03mo_photo.jpg " data-highres="images/hi03mo_photo.jpg " onclick="openModal(this)">
-            <img class="photos04" src="images/04mo_photo.jpg " data-highres="images/hi04mo_photo.jpg " onclick="openModal(this)">
-            <img class="photos05" src="images/05mo_photo.jpg " data-highres="images/hi05mo_photo.jpg " onclick="openModal(this)">
+            <img class="photos" id="photos01" src="images/01mo_photo.jpg " data-highres="images/hi01mo_photo.jpg " onclick="openModal(this)">
+            <img class="photos" id="photos02" src="images/02mo_photo.jpg " data-highres="images/hi02mo_photo.jpg " onclick="openModal(this)">
+            <img class="photos" id="photos03" src="images/03mo_photo.jpg " data-highres="images/hi03mo_photo.jpg " onclick="openModal(this)">
+            <img class="photos" id="photos04" src="images/04mo_photo.jpg " data-highres="images/hi04mo_photo.jpg " onclick="openModal(this)">
+            <img class="photos" id="photos05" src="images/05mo_photo.jpg " data-highres="images/hi05mo_photo.jpg " onclick="openModal(this)">
                 <!-- モーダル -->
             <div id="modal" class="modal">
                 <span class="close" onclick="closeModal()">&times;</span>
                 <img class="modal-content" id="modal-image">
             </div>
             <img class="goal" src="../images/goalpin.png" >
-            <h1><a class="time01">04:50<br></a></h1>
+            <h1><a class="time01" id="time01">04:50<br></a></h1>
             <div class="textbox01">
                 長い道のりをいく。都立大は横に長い。テニスコートをぬけ、端まで初めて行ってみる。
             </div>
-            <h1><a class="time02">05:07<br></a></h1>
+            <h1><a class="time02" id="time02">05:07<br></a></h1>
             <div style="font-size: 1.4vw;" class="textbox02">
                 都立大学の突き当り、2つ道があるけど今回は右のこっち。橋が見える方も緑のトンネルが綺麗。空が明るくなってくる頃。
             </div>
-            <h1><a class="time03">05:10<br></a></h1>
+            <h1><a class="time03" id="time03">05:10<br></a></h1>
             <div class="textbox03">
                 駐車場を入って左、柵の先に展望台が現れる。登ってみる。
             </div>
-            <h1><a class="time04">05:14<br></a></h1>
+            <h1><a class="time04" id="time04">05:14<br></a></h1>
             <div class="textbox04">
                 太陽とは反対方向、小さいけれど遠くの方に富士山が見える。ぜひ見つけてほしい。
             </div>
-            <h1><a class="time05">05:26<br></a></h1>
+            <h1><a class="time05" id="time05">05:26<br></a></h1>
             <div style="font-size: 1.3vw;" class="textbox05">
                 少し足を伸ばして富士見橋まで降りると、道が太陽の方向に続いていて綺麗な朝日と道路、川が見れる。冬の澄んだ空気の時は雪の被った富士山も。
             </div>
@@ -86,6 +87,14 @@
         <footer class="footer">
         </footer>
         <script src="../script.js"></script>
+        <script>
+            placeGoalFlag(15.2, 37, "time05");
+            createPin(29.7, 48, "time01"); // 1つ目のピン
+            createPin(25, 57, "time02");   // 2つ目のピン
+            createPin(21.5, 54.5, "time03");   // 3つ目のピン
+            createPin(19, 52, "time04");   // 4つ目のピン
+            // createPin(60, 30);   // 5つ目のピン
+        </script>
     </div>
 </body>
 </html>

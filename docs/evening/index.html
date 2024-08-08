@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title> <!-- タイトル変える -->
+    <title>minamioosawasanpo/eveningmap</title> 
     <link rel="stylesheet" href="../style.css">
     <!-- font stick -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -27,10 +27,11 @@
                 <img src="images/eveningmap.png" alt="Map Image"> 
             </div>
             <!-- <img class="pin"   src="../images/pin.png" > -->
-            <img class="allow"   src="../images/allow.png" >
+            <img class="allow" id="allow" src="../images/allow.png" >
             <img style="position: absolute;top: 15vw; left:2vw;width: 26vw;" 
             src="../images/cloudL.png" alt="cloudL">
             <h2 style="top: 48vw; " class="logo02"><a>Eveningmap by Hibiki</a></h2>
+            <img class="star" style="width: 3vw; top: 41vw; left: 69vw;"   src="../images/star.png" >
         </nav>
         <aside class="side2">
             <div class="icon">
@@ -49,34 +50,34 @@
 
         <main class="main">
             <img class="road" src="images/road_evening.png " >
-            <img class="photos01" src="images/01ev_photo.jpg " data-highres="images/hi01ev_photo.jpg " onclick="openModal(this)">
-            <img class="photos02" src="images/02ev_photo.jpg " data-highres="images/hi02ev_photo.jpg " onclick="openModal(this)">
-            <img class="photos03" src="images/03ev_photo.jpg " data-highres="images/hi03ev_photo.jpg " onclick="openModal(this)">
-            <img class="photos04" src="images/04ev_photo.jpg " data-highres="images/hi04ev_photo.jpg " onclick="openModal(this)">
-            <img class="photos05" src="images/05ev_photo.jpg " data-highres="images/hi05ev_photo.jpg " onclick="openModal(this)">
+            <img class="photos" id="photos01" src="images/01ev_photo.jpg " data-highres="images/hi01ev_photo.jpg " onclick="openModal(this)">
+            <img class="photos" id="photos02" src="images/02ev_photo.jpg " data-highres="images/hi02ev_photo.jpg " onclick="openModal(this)">
+            <img class="photos" id="photos03" src="images/03ev_photo.jpg " data-highres="images/hi03ev_photo.jpg " onclick="openModal(this)">
+            <img class="photos" id="photos04" src="images/04ev_photo.jpg " data-highres="images/hi04ev_photo.jpg " onclick="openModal(this)">
+            <img class="photos" id="photos05" src="images/05ev_photo.jpg " data-highres="images/hi05ev_photo.jpg " onclick="openModal(this)">
             <img class="goal" src="../images/goalpin.png" >
             <!-- モーダル -->
             <div id="modal" class="modal">
                 <span class="close" onclick="closeModal()">&times;</span>
                 <img class="modal-content" id="modal-image">
             </div>           
-            <h1><a class="time01">18:00<br></a></h1>
+            <h1><a class="time01" id="time01">18:00<br></a></h1>
             <div class="textbox01">
                 ５限終わり。南大沢駅を出発。天気がいいから夕焼けを見に行こう。
             </div>
-            <h1><a class="time02">18:05<br></a></h1>
+            <h1><a class="time02" id="time02">18:05<br></a></h1>
             <div class="textbox02">
                 南大沢のアウトレット。少しずつ日が傾いてきてる。今日の気温は35度。
             </div>
-            <h1><a class="time03">18:22<br></a></h1>
+            <h1><a class="time03" id="time03">18:22<br></a></h1>
             <div class="textbox03">
                 愛宕小学校。夏休みの小学生はまだまだ遊べる時間。
             </div>
-            <h1><a class="time04">18:29<br></a></h1>
+            <h1><a class="time04" id="time04">18:29<br></a></h1>
             <div class="textbox04">
                 上柚木公園の芝生の丘。展望台があるらしい。汗だくだったので行かなかった。
             </div>
-            <h1><a class="time05">18:31<br></a></h1>
+            <h1><a class="time05" id="time05">18:31<br></a></h1>
             <div style="font-size: 1.5vw;" class="textbox05">
                 公園の近くの橋から見えた夕焼け。満足したから今日はここまで。アイスを買って帰ろう。
             </div>
@@ -87,4 +88,11 @@
         <footer class="footer">
         </footer>
         <script src="../script.js"></script>
+        <script>
+            placeGoalFlag(28, 40, "time05");
+            createPin(36, 67.5, "time01"); // 1つ目のピン
+            createPin(31.7, 60.4, "time02");   // 2つ目のピン
+            createPin(23.5, 38.5, "time03");   // 3つ目のピン
+            createPin(19, 26.9, "time04");   // 4つ目のピン
+        </script>
     </div>

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title> <!-- タイトル変える -->
+    <title>minamioosawasanpo/afternoonmap</title> 
     <link rel="stylesheet" href="../style.css">
     <!-- font stick -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -27,10 +27,11 @@
                 <img src="images/afternoonmap.png" alt="Map Image"> 
             </div>
             <!-- <img class="pin"   src="../images/pin.png" > -->
-            <img class="allow"   src="../images/allow.png" >
+            <img class="allow" id="allow"src="../images/allow.png" >
             <img style="position: absolute;top: 15vw; left:2vw;width: 22vw;" 
             src="../images/cloudL.png" alt="cloudL">
             <h2 style="top: 48vw;font-size: 1.6vw; " class="logo02"><a>Afternoonmap by Kurokazu</a></h2>
+            <img class="star" style="width: 3vw; top: 27vw; left: 31vw;"   src="../images/star.png" >
         </nav>
         <aside class="side2">
             <div class="icon">
@@ -49,11 +50,11 @@
 
         <main class="main">
             <img class="road" src="images/road_afternoon.png " >
-            <img class="photos01" src="images/01af_photo.jpg " data-highres="images/hi01af_photo.jpg " onclick="openModal(this)">
-            <img class="photos02" src="images/02af_photo.jpg " data-highres="images/hi02af_photo.jpg " onclick="openModal(this)">
-            <img class="photos03" src="images/03af_photo.jpg " data-highres="images/hi03af_photo.jpg " onclick="openModal(this)">
-            <img class="photos04" src="images/04af_photo.jpg " data-highres="images/hi04af_photo.jpg " onclick="openModal(this)">
-            <img class="photos05" src="images/05af_photo.jpg " data-highres="images/hi05af_photo.jpg " onclick="openModal(this)">
+            <img class="photos" id="photos01" src="images/01af_photo.jpg " data-highres="images/hi01af_photo.jpg " onclick="openModal(this)">
+            <img class="photos" id="photos02" src="images/02af_photo.jpg " data-highres="images/hi02af_photo.jpg " onclick="openModal(this)">
+            <img class="photos" id="photos03" src="images/03af_photo.jpg " data-highres="images/hi03af_photo.jpg " onclick="openModal(this)">
+            <img class="photos" id="photos04" src="images/04af_photo.jpg " data-highres="images/hi04af_photo.jpg " onclick="openModal(this)">
+            <img class="photos" id="photos05" src="images/05af_photo.jpg " data-highres="images/hi05af_photo.jpg " onclick="openModal(this)">
             <img class="goal" src="../images/goalpin.png" >
                         <!-- モーダル -->
             <div id="modal" class="modal">
@@ -61,23 +62,23 @@
                 <img class="modal-content" id="modal-image">
             </div>
             
-            <h1><a class="time01">13:00<br></a></h1>
+            <h1><a class="time01" id="time01">13:00<br></a></h1>
             <div class="textbox01">
                 南大沢駅から東側に向かって歩く。草木が生い茂った涼しげな道で暑い日にはありがたい。
             </div>
-            <h1><a class="time02">13:05<br></a></h1>
+            <h1><a class="time02" id="time02">13:05<br></a></h1>
             <div class="textbox02">
                 進んでいくと謎神社を発見。散歩の安全を願って手を合わせてみる。こんなところに神様はいるのだろうか。
             </div>
-            <h1><a class="time03">13:20<br></a></h1>
+            <h1><a class="time03" id="time03">13:20<br></a></h1>
             <div style="font-size: 1.35vw;" class="textbox03">
                 住宅街へと続く歩道橋を歩いていくと上の方に橋を見つけた。南大沢を一望できるいい橋だ。展望橋と名付けよう。。
             </div>
-            <h1><a class="time04">13:30<br></a></h1>
+            <h1><a class="time04" id="time04">13:30<br></a></h1>
             <div class="textbox04">
                 坂を下っていくと緑地に着いた。小川が流れていて心が安らぐ。
             </div>
-            <h1><a class="time05">13:40<br></a></h1>
+            <h1><a class="time05" id="time05">13:40<br></a></h1>
             <div style="font-size: 1.35vw;" class="textbox05">
                 緑地の中に階段があった。影の中へと続くその道はどこに繋がっていくのだろうか。まだ見ぬ道を求めて散歩は続いていく。
             </div>
@@ -88,4 +89,11 @@
         <footer class="footer">
         </footer>
         <script src="../script.js"></script>
+        <script>
+            placeGoalFlag(36.2, 65.7, "time05");
+            createPin(28, 40, "time01"); // 1つ目のピン
+            createPin(25, 48.1, "time02");   // 2つ目のピン
+            createPin(27.2, 56.5, "time03");   // 3つ目のピン
+            createPin(33, 63.2, "time04");   // 4つ目のピン
+        </script>
     </div>
