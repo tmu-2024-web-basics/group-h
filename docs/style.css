@@ -1,6 +1,6 @@
 .container01{
     display: grid;
-    grid-template-rows: 12vw 38vw 1fr 1fr;
+    grid-template-rows: 12vw 38vw 1fr 7vw;
     grid-template-columns: 14.2vw 65vw 15.69vw;
     grid-template-areas: 
     "header header header"
